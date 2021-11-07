@@ -41,6 +41,10 @@
     "content": {
       "type": "richtext",
       "required": true
+    },
+    "taxonomies": {
+      "collection": "taxonomy",
+      "via": "article"
     }
   }
 }

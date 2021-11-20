@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "taxonomies",
+  "info": {
+    "name": "taxonomy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "article": {
+      "via": "taxonomies",
+      "model": "article"
+    }
+  }
+}

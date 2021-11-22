@@ -46,6 +46,16 @@
       "collection": "taxonomy",
       "via": "articles",
       "dominant": true
+    },
+    "dynamic_zone": {
+      "type": "dynamiczone",
+      "components": [
+        "global.cartes",
+        "global.texte-image",
+        "global.wysiwyg"
+      ],
+      "required": true,
+      "min": 1
     }
   }
 }

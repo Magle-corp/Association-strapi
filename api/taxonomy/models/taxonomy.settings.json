@@ -16,9 +16,9 @@
       "required": true,
       "maxLength": 50
     },
-    "article": {
+    "articles": {
       "via": "taxonomies",
-      "model": "article"
+      "collection": "article"
     }
   }
 }

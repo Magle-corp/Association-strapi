@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_global_texte_images",
+  "info": {
+    "name": "texte + image",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "content": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1000
+    },
+    "image_side": {
+      "type": "enumeration",
+      "enum": [
+        "Gauche",
+        "Droite"
+      ],
+      "required": true,
+      "default": "Gauche"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}

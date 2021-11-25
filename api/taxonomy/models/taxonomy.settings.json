@@ -19,6 +19,10 @@
     "articles": {
       "via": "taxonomies",
       "collection": "article"
+    },
+    "evenements": {
+      "via": "taxonomies",
+      "collection": "evenement"
     }
   }
 }

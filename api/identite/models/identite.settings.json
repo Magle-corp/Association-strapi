@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "identites",
+  "info": {
+    "name": "identite"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 35
+    },
+    "address": {
+      "type": "string",
+      "required": false,
+      "maxLength": 100
+    },
+    "zip_code": {
+      "type": "string",
+      "maxLength": 5
+    },
+    "city": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "phone": {
+      "type": "string",
+      "required": false,
+      "maxLength": 10
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "maxLength": 100
+    },
+    "logo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "facebook": {
+      "type": "string",
+      "required": false,
+      "maxLength": 200
+    },
+    "instagram": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "twitter": {
+      "type": "string",
+      "maxLength": 200
+    }
+  }
+}

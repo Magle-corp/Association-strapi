@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/identite",
+      "handler": "identite.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/identite",
+      "handler": "identite.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/identite",
+      "handler": "identite.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

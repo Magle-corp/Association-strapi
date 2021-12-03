@@ -15,18 +15,18 @@
     "title": {
       "type": "string",
       "required": true,
-      "maxLength": 100
+      "maxLength": 70
     },
     "slug": {
       "type": "uid",
       "targetField": "title",
       "required": true,
-      "maxLength": 100
+      "maxLength": 70
     },
     "description": {
       "type": "text",
       "required": true,
-      "maxLength": 300
+      "maxLength": 200
     },
     "background": {
       "model": "file",

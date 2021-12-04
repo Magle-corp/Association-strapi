@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "identites",
   "info": {
-    "name": "identite"
+    "name": "identite",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -40,7 +41,7 @@
       "maxLength": 100
     },
     "logo": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images"

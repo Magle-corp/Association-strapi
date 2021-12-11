@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_d_accueils",
+  "info": {
+    "name": "Page d'accueil"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Banniere": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global.slider",
+      "required": true
+    }
+  }
+}

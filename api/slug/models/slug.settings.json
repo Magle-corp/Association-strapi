@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slugs",
+  "info": {
+    "name": "Slug"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70
+    },
+    "related_page": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70
+    }
+  }
+}

@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "a_propos",
   "info": {
-    "name": "A Propos"
+    "name": "A Propos",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,7 +18,9 @@
         "global.cartes",
         "global.texte-image",
         "global.wysiwyg"
-      ]
+      ],
+      "required": true,
+      "min": 1
     }
   }
 }

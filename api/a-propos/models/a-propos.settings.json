@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "a_propos",
+  "info": {
+    "name": "A Propos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dynamic_zone": {
+      "type": "dynamiczone",
+      "components": [
+        "global.cartes",
+        "global.texte-image",
+        "global.wysiwyg"
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_global_internal_links",
+  "info": {
+    "name": "Lien interne",
+    "icon": "external-link-square-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link_title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "slug": {
+      "model": "slug"
+    },
+    "link_seo": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

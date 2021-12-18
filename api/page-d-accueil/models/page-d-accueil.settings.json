@@ -27,6 +27,11 @@
       "type": "text",
       "required": true,
       "maxLength": 180
+    },
+    "main_link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global.internal-link"
     }
   }
 }

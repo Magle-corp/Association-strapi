@@ -19,12 +19,13 @@
     },
     "link_title": {
       "type": "string",
-      "required": true,
+      "required": false,
       "maxLength": 30
     },
     "link_seo": {
       "type": "string",
-      "required": true
+      "required": false,
+      "maxLength": 100
     },
     "slug": {
       "model": "slug"

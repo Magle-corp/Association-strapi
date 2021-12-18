@@ -39,7 +39,7 @@ module.exports = {
           .query("slug")
           .find({ related_page: `article_${result.id}` });
 
-        strapi.query("slug").delete({ id: related_slug.id });
+        strapi.query("slug").delete({ id: related_slug[0].id });
       }
     },
   },

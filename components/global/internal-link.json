@@ -12,7 +12,7 @@
       "required": false,
       "maxLength": 30
     },
-    "slug": {
+    "link": {
       "model": "slug"
     },
     "link_seo": {

@@ -12,7 +12,7 @@ module.exports = {
       if (result.published_at !== null && data.published_at) {
         strapi.query("slug").create({
           title: result.title,
-          slug: result.slug,
+          slug: `/publications/articles/${result.slug}`,
           related_page: `article_${result.id}`,
         });
       }
@@ -27,7 +27,7 @@ module.exports = {
           { id: related_slug[0].id },
           {
             title: result.title,
-            slug: result.slug,
+            slug: `/publications/articles/${result.slug}`,
             related_page: `article_${result.id}`,
           }
         );

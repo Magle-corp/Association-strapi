@@ -49,9 +49,7 @@
         "global.cartes",
         "global.texte-image",
         "global.wysiwyg"
-      ],
-      "required": true,
-      "min": 1
+      ]
     }
   }
 }

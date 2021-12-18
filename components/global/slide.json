@@ -20,7 +20,7 @@
     "link_title": {
       "type": "string",
       "required": true,
-      "maxLength": 150
+      "maxLength": 100
     },
     "link_seo": {
       "type": "string",

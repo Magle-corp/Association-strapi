@@ -31,7 +31,8 @@
     "main_link": {
       "type": "component",
       "repeatable": false,
-      "component": "global.internal-link"
+      "component": "global.internal-link",
+      "required": true
     }
   }
 }

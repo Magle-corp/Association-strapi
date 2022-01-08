@@ -38,8 +38,9 @@ module.exports = {
         const related_slug = await strapi
           .query("slug")
           .find({ related_page: `article_${result.id}` });
-
-        strapi.query("slug").delete({ id: related_slug[0].id });
+        if (related_slug.length > 0) {
+          strapi.query("slug").delete({ id: related_slug[0].id });
+        }
       }
     },
   },

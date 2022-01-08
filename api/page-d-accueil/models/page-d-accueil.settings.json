@@ -28,10 +28,10 @@
       "required": true,
       "maxLength": 180
     },
-    "main_link": {
+    "button": {
       "type": "component",
+      "component": "utile.bouton",
       "repeatable": false,
-      "component": "global.internal-link",
       "required": true
     }
   }

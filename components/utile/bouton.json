@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_utile_boutons",
+  "info": {
+    "name": "Bouton",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "link_seo": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "slug": {
+      "model": "slug"
+    }
+  }
+}

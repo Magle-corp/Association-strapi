@@ -17,18 +17,9 @@
       "required": true,
       "maxLength": 150
     },
-    "link_title": {
-      "type": "string",
-      "required": false,
-      "maxLength": 30
-    },
-    "link_seo": {
-      "type": "string",
-      "required": false,
-      "maxLength": 100
-    },
-    "link": {
-      "model": "slug"
+    "button": {
+      "type": "component",
+      "component": "utile.bouton"
     }
   }
 }

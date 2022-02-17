@@ -14,7 +14,7 @@ module.exports = {
         // Production frontend, needed for fetch.
         "http://association-next.magle.fr",
         // Production backend, needed for access admin.
-        "http://association-next.magle.fr",
+        "http://association-strapi.magle.fr",
       ],
     },
   },

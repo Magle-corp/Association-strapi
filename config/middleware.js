@@ -2,13 +2,18 @@ module.exports = {
   settings: {
     cors: {
       enabled: true,
-      // headers: '*',
       origin: [
-        // Local.
+        // Local frontend, needed for fetch.
         "http://localhost",
-        // Staging.
+        // Local backend, needed for access admin.
+        "http://localhost:1337",
+        // Staging frontend, needed for fetch.
         "http://association-next-staging.magle.fr",
-        // Production.
+        // Staging backend, needed for access admin.
+        "http://association-strapi-staging.magle.fr",
+        // Production frontend, needed for fetch.
+        "http://association-next.magle.fr",
+        // Production backend, needed for access admin.
         "http://association-next.magle.fr",
       ],
     },

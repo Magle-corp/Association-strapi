@@ -1,10 +1,5 @@
 name: CI staging
 
-# STAGING_DB
-# DB_PASSWORD
-# DB_USERNAME
-# STAGING_PORT
-
 on:
   push:
     branches: [staging]

@@ -32,6 +32,8 @@ jobs:
         run: sed -i 's/DATABASE_USERNAME=root/DATABASE_USERNAME=${{ secrets.DB_USERNAME }}/g' .env
       - name: Set DATABASE_PASSWORD env variable
         run: sed -i 's/DATABASE_PASSWORD=root/DATABASE_PASSWORD=${{ secrets.DB_PASSWORD }}/g' .env
+      - name: Set DATABASE_HOST env variable
+        run: sed -i 's/DATABASE_HOST=db/DATABASE_HOST=${{ secrets.DB_HOST }}/g' .env
       - name: Set DATABASE_NAME env variable
         run:  sed -i 's/DATABASE_NAME=Association/DATABASE_NAME=${{ secrets.STAGING_DB }}/g' .env
       - name: Yarn install

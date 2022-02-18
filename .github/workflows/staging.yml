@@ -26,8 +26,8 @@ jobs:
           known_hosts: 'just_a_placeholder_to_avoid_errors'
       - name: Adding know hosts
         run: ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
-      - name: Set HOST env variable
-        run: sed -i 's/HOST=1337/HOST=${{ secrets.STAGING_PORT }}/g' .env
+      - name: Set PORT env variable
+        run: sed -i 's/PORT=1337/PORT=${{ secrets.STAGING_PORT }}/g' .env
       - name: Set DATABASE_USERNAME env variable
         run: sed -i 's/DATABASE_USERNAME=root/DATABASE_USERNAME=${{ secrets.DB_USERNAME }}/g' .env
       - name: Set DATABASE_PASSWORD env variable

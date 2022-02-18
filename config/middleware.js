@@ -8,9 +8,9 @@ module.exports = ({ env }) => ({
         // Local backend.
         env("LOCAL_BACKEND", "http://localhost:1337"),
         // Staging frontend.
-        env("STAGING_FRONTEND", "http://localhost"),
+        env("http://association-next-staging.magle.fr", "http://localhost"),
         // Staging backend.
-        env("STAGING_BACKEND", "http://localhost"),
+        env("http://association-strapi-staging.magle.fr", "http://localhost"),
         // Production frontend.
         env("PROD_FRONTEND", "http://localhost"),
         // Production backend.

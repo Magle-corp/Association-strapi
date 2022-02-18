@@ -1,21 +1,22 @@
-module.exports = {
+module.exports = ({ env }) => ({
   settings: {
     cors: {
       enabled: true,
       origin: [
-        // Local frontend, needed for fetch.
-        "http://localhost",
-        // Local backend, needed for access admin.
-        "http://localhost:1337",
-        // Staging frontend, needed for fetch.
-        "http://association-next-staging.magle.fr",
-        // Staging backend, needed for access admin.
-        "http://association-strapi-staging.magle.fr",
-        // Production frontend, needed for fetch.
-        "http://association-next.magle.fr",
-        // Production backend, needed for access admin.
-        "http://association-strapi.magle.fr",
+        // Local.
+        env("LOCAL_FRONTEND", "http://localhost:3000"),
+        env("LOCAL_BACKEND", "http://localhost:1337"),
+        // Staging.
+        env("STAGING_FRONTEND", "http://localhost"),
+        env("STAGING_FRONTEND_WWW", "http://localhost"),
+        env("STAGING_BACKEND", "http://localhost"),
+        env("STAGING_BACKEND_WWW", "http://localhost"),
+        // Production.
+        env("PROD_FRONTEND", "http://localhost"),
+        env("PROD_FRONTEND_WWW", "http://localhost"),
+        env("PROD_BACKEND", "http://localhost"),
+        env("PROD_BACKEND_WWW", "http://localhost"),
       ],
     },
   },
-};
+});

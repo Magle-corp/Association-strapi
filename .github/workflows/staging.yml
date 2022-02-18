@@ -21,11 +21,21 @@ jobs:
           known_hosts: 'just_a_placeholder_to_avoid_errors'
       - name: Adding know hosts
         run: ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+      - name: Set PORT env variable
+        run: sed -i 's/PORT=1337/PORT=${{ secrets.STAGING_PORT }}/g' .env
+      - name: Set DATABASE_USERNAME env variable
+        run: sed -i 's/DATABASE_USERNAME=root/DATABASE_USERNAME=${{ secrets.DB_USERNAME }}/g' .env
+      - name: Set DATABASE_PASSWORD env variable
+        run: sed -i 's/DATABASE_PASSWORD=root/DATABASE_PASSWORD=${{ secrets.DB_PASSWORD }}/g' .env
+      - name: Set DATABASE_HOST env variable
+        run: sed -i 's/DATABASE_HOST=db/DATABASE_HOST=${{ secrets.DB_HOST }}/g' .env
+      - name: Set DATABASE_NAME env variable
+        run:  sed -i 's/DATABASE_NAME=Association/DATABASE_NAME=${{ secrets.STAGING_DB }}/g' .env
       - name: Yarn install
         run: yarn install --frozen-lockfile
       - name: Build project
         run: NODE_ENV=production yarn build
       - name: Rsync project with server one
-        run: rsync -r --exclude="config/database.js" --exclude="config/server.js" . ${{ secrets.SERVER }}:${{ secrets.STAGING_FOLDER }}
+        run: rsync -r . ${{ secrets.SERVER }}:${{ secrets.STAGING_FOLDER }}
       - name: Restart server
         run: ssh ${{ secrets.SERVER }} pm2 reload ${{ secrets.STAGING_PROCESS_NAME }}

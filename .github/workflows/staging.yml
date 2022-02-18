@@ -27,10 +27,7 @@ jobs:
       - name: Adding know hosts
         run: ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
       - name: Set appropriate env variables
-        run: sed -i 's/HOST=1337/HOST=${{ secrects.STAGING_PORT }}/g' env &&
-        sed -i 's/DATABASE_USERNAME=root/DATABASE_USERNAME=${{ secrects.DB_USERNAME }}/g' env &&
-        sed -i 's/DATABASE_PASSWORD=Association/DATABASE_PASSWORD=${{ secrects.DB_PASSWORD }}/g' env &&
-        sed -i 's/DATABASE_NAME=Association/DATABASE_NAME=${{ secrects.STAGING_DB }}/g' env
+        run: sed -i 's/HOST=1337/HOST=${{ secrects.STAGING_PORT }}/g' env && sed -i 's/DATABASE_USERNAME=root/DATABASE_USERNAME=${{ secrects.DB_USERNAME }}/g' env && sed -i 's/DATABASE_PASSWORD=Association/DATABASE_PASSWORD=${{ secrects.DB_PASSWORD }}/g' env && sed -i 's/DATABASE_NAME=Association/DATABASE_NAME=${{ secrects.STAGING_DB }}/g' env
       - name: Yarn install
         run: yarn install --frozen-lockfile
       - name: Build project
